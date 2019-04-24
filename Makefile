@@ -1,7 +1,7 @@
 PREFIX = /usr
 INSTALL = install
 CFLAGS += -Wall -D__dead=
-FLAGS = $(shell pkg-config --libs --cflags xscrnsaver xext x11)
+FLAGS = $(shell pkg-config --libs --cflags xscrnsaver xext x11 libbsd)
 
 xidle:
 	$(CC) -o xidle xidle.c $(CFLAGS) $(LDFLAGS) $(FLAGS)
